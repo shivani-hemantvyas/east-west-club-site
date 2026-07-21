@@ -24,6 +24,7 @@
     --cream-bg:#F3EEE2;
     --cream-ink:#12241C;
     --cream-mute:#6B6354;
+    --card-bg:#1B1A16;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -40,7 +41,7 @@
     text-transform:uppercase; font-weight:500; color:var(--mute); display:block;
   }
   h1,h2,h3{
-    font-family:var(--serif); font-weight:500; text-transform:uppercase;
+    font-family:var(--serif); font-weight:500; text-transform:none;
     letter-spacing:0.02em; margin:0; color:var(--ink); line-height:1.2;
   }
   .accent{color:var(--accent);}
@@ -84,10 +85,17 @@
     display:inline-flex; align-items:center; justify-content:center; padding:14px 28px;
     font-family:var(--sans);
     font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase;
-    font-weight:600; background:var(--accent); color:var(--paper); border:none; transition:all .2s ease;
+    font-weight:600; background:var(--card-bg); color:var(--ink); border:none; transition:all .2s ease;
     cursor:pointer;
   }
-  .btn:hover{background:var(--ink);}
+  .btn:hover{background:var(--paper-2);}
+
+  .btn-dark{background:var(--card-bg); color:var(--ink);}
+  .btn-dark:hover{background:var(--paper-2); color:var(--ink);}
+  .btn-outline{background:transparent; color:var(--cream-ink); border:1px solid rgba(18,36,28,0.4);}
+  .btn-outline:hover{background:var(--cream-ink); color:var(--cream-bg); border-color:var(--cream-ink);}
+  .btn-cream{background:var(--cream-bg); color:var(--paper-2);}
+  .btn-cream:hover{background:var(--ink); color:var(--paper-2);}
 
   /* ---------- PAGE HERO ---------- */
   .page-hero-inner{position:relative; z-index:2;}
@@ -95,37 +103,37 @@
   .page-hero-inner h1{font-size:clamp(20px,2.4vw,28px);}
 
   /* ---------- CONTACT ---------- */
-  .contact-section{background:var(--paper); padding:80px 0 40px;}
+  .contact-section{background:var(--cream-bg); padding:80px 0 40px;}
   .contact-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px; align-items:start;}
   .contact-info .item{margin-bottom:34px;}
-  .contact-info .eyebrow{margin-bottom:10px;}
+  .contact-info .eyebrow{margin-bottom:10px; color:var(--accent-d);}
   .contact-info p{
-    font-family:var(--sans); font-weight:400; font-size:15.5px; color:var(--ink); line-height:1.75;
+    font-family:var(--sans); font-weight:400; font-size:15.5px; color:var(--cream-mute); line-height:1.75;
   }
   .contact-info a:hover{color:var(--accent);}
   .contact-form .form-field{margin-bottom:22px;}
   .contact-form .form-row{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   .contact-form label{
     display:block; font-family:var(--sans); font-size:11px; letter-spacing:0.1em;
-    text-transform:uppercase; color:var(--mute); margin-bottom:8px;
+    text-transform:uppercase; color:var(--cream-mute); margin-bottom:8px;
   }
   .contact-form input,
   .contact-form select,
   .contact-form textarea{
-    width:100%; background:rgba(236,227,206,0.04); border:1px solid var(--rule-2);
-    color:var(--ink); font-family:var(--sans); font-size:14.5px; font-weight:400;
+    width:100%; background:#fff; border:1px solid rgba(18,36,28,0.18);
+    color:var(--cream-ink); font-family:var(--sans); font-size:14.5px; font-weight:400;
     padding:13px 14px; outline:none; transition:border-color .2s ease;
   }
   .contact-form select{
     appearance:none; -webkit-appearance:none; -moz-appearance:none;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2393A498' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2312241C' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");
     background-repeat:no-repeat; background-position:right 14px center; padding-right:36px;
   }
-  .contact-form select option{background:var(--paper-2); color:var(--ink);}
+  .contact-form select option{background:#fff; color:var(--cream-ink);}
   .contact-form textarea{min-height:130px; resize:vertical;}
   .contact-form input:focus,
   .contact-form select:focus,
-  .contact-form textarea:focus{border-color:var(--accent);}
+  .contact-form textarea:focus{border-color:var(--accent-d);}
   .contact-form .btn{margin-top:4px;}
 
   /* ---------- FAQ ---------- */
@@ -235,13 +243,18 @@
       <div class="nav-item">
         <a class="plain" href="index.html">About</a>
         <div class="nav-dropdown">
-          <a href="index.html#story">Our Story</a>
           <a href="index.html">Home</a>
+          <a href="east-west-club-our-story.html">Our Story</a>
         </div>
       </div>
       <a class="plain" href="east-west-club-founding-membership.html">Membership</a>
       <a class="plain" href="east-west-club-inside.html">The Club</a>
-      <a class="plain" href="east-west-club-contact.html">Contact</a>
+      <div class="nav-item">
+        <a class="plain" href="east-west-club-contact.html">Contact</a>
+        <div class="nav-dropdown">
+          <a href="east-west-club-contact.html#faq">FAQ</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -292,12 +305,12 @@
         <label for="c-message">Message</label>
         <textarea id="c-message" name="message" placeholder="Tell us a little about what brought you here."></textarea>
       </div>
-      <button type="submit" class="btn">Send Inquiry</button>
+      <button type="submit" class="btn btn-dark">Send Inquiry</button>
     </form>
   </div>
 </section>
 
-<section class="faq cream">
+<section class="faq" id="faq">
   <div class="wrap">
     <div class="faq-head">
       <h2>A Few Things People Ask</h2>
@@ -313,7 +326,43 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Can I bring family?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes &mdash; East | West is built around the idea that work, golf, and family don't need separate memberships.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes, East | West is built around the idea that work, golf, and family don't need separate memberships.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What exactly are the founding 25 getting?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The club will cap at about 250 members, with 75 to 100 of them founding members over time, and these are the first 25 seats. Being in the first 25 locks in the lowest initiation fee we'll ever offer; every cohort after these 25 joins at a higher rate. Included: four years of club membership, every founding-member event, founding-member designation in perpetuity, and guest privileges from day one. Food and beverage, the pro shop, and instruction are billed separately.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">When does membership start?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You're a founding member the day you sign, in every room, at every dinner, and your four years don't start counting until the club opens. From day one, you get curated dinners, previews, collaborations, and the founder access that marks being first.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if you don't open by Q1 2027?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">We anticipate there may be some delays as we finalize permitting and construction, and will keep founding members updated on our progress every step of the way.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if my spouse doesn't get it?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Tell them to come meet us, we'd love the chance to share our vision in person.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if I'm not really a golfer?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Some of our founding members aren't golfers at all, the club is built around connection first, golf second.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I bring guests?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, you can definitely bring guests, with founding members receiving guest privileges from day one.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there food?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. We want to have incredible food that showcases all of Seattle. We're going to get a bakery to deliver daily, and bring in local chefs and restaurateurs to rotate through.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What about kids?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Families will be welcome. We want East | West Club to exist for families. We'd love to have families with kids be part of our founding members.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there parking?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. There is parking today on the street, and there will be an additional members' lot accessible from the alley behind the club by the time the club opens in 2027.</div></div>
       </div>
     </div>
   </div>
@@ -322,9 +371,9 @@
 <footer class="site-footer">
   <div class="wrap footer-row">
     <div class="footer-links">
-      <a href="index.html#story">Our Story</a>
+      <a href="east-west-club-our-story.html">Our Story</a>
       <a href="east-west-club-inside.html">Inside the Club</a>
-      <a href="east-west-club-founding-membership.html#faq">FAQs</a>
+      <a href="east-west-club-contact.html#faq">FAQs</a>
       <a href="east-west-club-founding-membership.html#join">Member Inquiry</a>
       <a class="footer-social" href="#" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

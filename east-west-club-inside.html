@@ -24,6 +24,7 @@
     --cream-bg:#F3EEE2;
     --cream-ink:#12241C;
     --cream-mute:#6B6354;
+    --card-bg:#1B1A16;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -40,7 +41,7 @@
     text-transform:uppercase; font-weight:500; color:var(--mute); display:block;
   }
   h1,h2,h3{
-    font-family:var(--serif); font-weight:500; text-transform:uppercase;
+    font-family:var(--serif); font-weight:500; text-transform:none;
     letter-spacing:0.02em; margin:0; color:var(--ink); line-height:1.2;
   }
   .accent{color:var(--accent);}
@@ -84,9 +85,16 @@
     display:inline-flex; align-items:center; justify-content:center; padding:14px 28px;
     font-family:var(--sans);
     font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase;
-    font-weight:600; background:var(--accent); color:var(--paper); border:none; transition:all .2s ease;
+    font-weight:600; background:var(--card-bg); color:var(--ink); border:none; transition:all .2s ease;
   }
-  .btn:hover{background:var(--ink);}
+  .btn:hover{background:var(--paper-2);}
+
+  .btn-dark{background:var(--card-bg); color:var(--ink);}
+  .btn-dark:hover{background:var(--paper-2); color:var(--ink);}
+  .btn-outline{background:transparent; color:var(--cream-ink); border:1px solid rgba(18,36,28,0.4);}
+  .btn-outline:hover{background:var(--cream-ink); color:var(--cream-bg); border-color:var(--cream-ink);}
+  .btn-cream{background:var(--cream-bg); color:var(--paper-2);}
+  .btn-cream:hover{background:var(--ink); color:var(--paper-2);}
 
   /* ---------- PAGE HERO ---------- */
   .page-hero-inner{position:relative; z-index:2;}
@@ -250,13 +258,18 @@
       <div class="nav-item">
         <a class="plain" href="index.html">About</a>
         <div class="nav-dropdown">
-          <a href="index.html#story">Our Story</a>
           <a href="index.html">Home</a>
+          <a href="east-west-club-our-story.html">Our Story</a>
         </div>
       </div>
       <a class="plain" href="east-west-club-founding-membership.html">Membership</a>
       <a class="plain" href="east-west-club-inside.html">The Club</a>
-      <a class="plain" href="east-west-club-contact.html">Contact</a>
+      <div class="nav-item">
+        <a class="plain" href="east-west-club-contact.html">Contact</a>
+        <div class="nav-dropdown">
+          <a href="east-west-club-contact.html#faq">FAQ</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -290,7 +303,7 @@
 <section class="dark-banner cream">
   <div class="wrap">
     <span class="eyebrow">Beyond the Amenities</span>
-    <h2>Member dinners, tastings, golf nights, and the kind of programming you actually show up for.</h2>
+    <h2>Member Dinners, Tastings, Golf Nights, and the Kind of Programming You Actually Show Up For.</h2>
   </div>
 </section>
 
@@ -360,16 +373,16 @@
   <div class="wrap">
     <span class="eyebrow">Founding Membership &middot; First 25</span>
     <span class="lead">Full amenities open Q1 2027. Founding members are already inside.</span>
-    <a class="btn" href="east-west-club-founding-membership.html#join">Request an Invitation</a>
+    <a class="btn btn-cream" href="east-west-club-founding-membership.html#join">Request an Invitation</a>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap footer-row">
     <div class="footer-links">
-      <a href="index.html#story">Our Story</a>
+      <a href="east-west-club-our-story.html">Our Story</a>
       <a href="east-west-club-inside.html">Inside the Club</a>
-      <a href="east-west-club-founding-membership.html#faq">FAQs</a>
+      <a href="east-west-club-contact.html#faq">FAQs</a>
       <a href="east-west-club-founding-membership.html#join">Member Inquiry</a>
       <a class="footer-social" href="#" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
