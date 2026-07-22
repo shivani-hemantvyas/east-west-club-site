@@ -48,7 +48,7 @@
   p{margin:0;}
 
   /* ---------- HEADER (brand + nav) ---------- */
-  .header-block{background:var(--paper-2);}
+  .header-block{background:var(--paper-2); position:relative;}
   .brand-band{text-align:center; padding:38px 40px 20px;}
   .wordmark{font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(32px,4.2vw,46px); color:var(--ink); letter-spacing:0.01em;}
   .wordmark .divider{margin:0 20px; opacity:0.45; font-style:normal;}
@@ -219,8 +219,10 @@
   .footer-legal a:hover{color:var(--accent);}
 
   @media (max-width:900px){
-    .nav-row{justify-content:flex-end;}
-    .menu-toggle{display:flex;}
+    .header-block .brand-band{padding:3px 62px 3px;}
+    .brand-band .tagline{margin-top:1px; margin-left:-22px; margin-right:-22px;}
+    .nav-row{position:static; padding:0; border-top:none;}
+    .menu-toggle{display:flex; position:absolute; top:10px; right:20px;}
     .nav-links{
       display:none; position:absolute; top:100%; left:0; right:0;
       flex-direction:column; align-items:stretch; gap:0;
