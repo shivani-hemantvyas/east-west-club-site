@@ -167,6 +167,20 @@
   .cta-card h2 em{color:var(--accent); font-style:italic;}
   .cta-card p{font-family:var(--sans); font-size:14px; color:var(--soft); margin-bottom:34px;}
 
+  /* ---------- FAQ/CLOSING CTA ---------- */
+  .faq-cta{background:var(--cream-bg); padding:50px 0; text-align:center;}
+  .faq-cta .eyebrow{text-align:center; margin-bottom:16px; color:var(--accent-d);}
+  .faq-cta h2{font-size:clamp(26px,3.2vw,36px); color:var(--cream-ink); margin-bottom:20px;}
+  .faq-cta h2 em{font-style:italic; color:var(--accent-d);}
+  .faq-cta p{
+    font-family:var(--sans); font-weight:400; color:var(--cream-mute);
+    font-size:15.5px; line-height:1.8; max-width:38em; margin:0 auto 32px;
+  }
+  .faq-cta-buttons{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+  @media (min-width:901px){
+    .faq-cta-buttons .btn{padding:12px 22px; font-size:11.5px;}
+  }
+
   /* ---------- SITE FOOTER ---------- */
   .site-footer{background:var(--paper);}
   .footer-row{
@@ -249,6 +263,7 @@
     .idea-section{padding:48px 0;}
     .story-quote{padding:48px 0;}
     .story-cta{padding:44px 0;}
+    .faq-cta{padding:32px 0;}
   }
 
   /* ---------- STORY HERO 2 (mock) ---------- */
@@ -271,7 +286,7 @@
   .story-hero2-photo img{width:100%; height:100%; object-fit:cover; display:block;}
 
   /* ---------- TIMELINE (mock) ---------- */
-  .timeline-section{background:var(--paper-2); padding:90px 0 60px;}
+  .timeline-section{background:var(--paper-2); padding:90px 0 0;}
   .timeline-grid{display:grid; grid-template-columns:0.95fr 1.05fr; gap:80px; align-items:center;}
   .photo-stack{position:relative; width:330px; height:440px; margin:0 auto; cursor:pointer;}
   .stack-card{
@@ -303,7 +318,9 @@
   .timeline-year-tag{display:inline-block; font-family:var(--sans); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:14px;}
 
   /* ---------- WHY EAST WEST ---------- */
-  .why-section{background:var(--paper-2); padding:70px 0;}
+  .why-section{background:var(--paper-2); padding:0 0 70px;}
+  .divider-band{background:var(--paper-2); padding:60px 0;}
+  .section-divider{display:block; height:1px; background:var(--accent); opacity:0.3;}
   .why-columns{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;}
   .why-head{margin-bottom:24px;}
   .why-head h2{font-size:clamp(26px,3.2vw,36px); color:var(--ink);}
@@ -323,9 +340,10 @@
   }
   @media (max-width:600px){
     .story-hero2{padding:44px 0;}
-    .timeline-section{padding:56px 0 40px;}
+    .timeline-section{padding:56px 0 0;}
     .photo-stack{width:250px; height:333px;}
-    .why-section{padding:48px 0;}
+    .why-section{padding:0 0 48px;}
+    .divider-band{padding:40px 0;}
   }
 </style>
 </head>
@@ -410,6 +428,10 @@
   </div>
 </section>
 
+<div class="divider-band">
+  <div class="wrap"><span class="section-divider" aria-hidden="true"></span></div>
+</div>
+
 <section class="why-section">
   <div class="wrap">
     <div class="why-columns">
@@ -424,6 +446,17 @@
         <p>Ryan&rsquo;s upbringing looked different, but it led him toward many of the same ideas. The rhythm of his life was always organized around sport. Coaching, the weekend game, and becoming a regular somewhere taught him that people rarely become a community all at once. It happens by returning to familiar places, sharing experiences, and slowly becoming part of something bigger than yourself.</p>
         <p>Over the years, they realized they weren&rsquo;t describing two different ideas. They were describing the same human need through different experiences. One had learned it around a family table and in the clubs he visited in India. The other had found it on courts, in locker rooms, and on golf courses. East | West is our attempt to build a place that carries a little of both. Not a recreation of either world, but a place where the best parts of each can continue to shape everyday life.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-cta">
+  <div class="wrap">
+    <span class="eyebrow">Inside the Club</span>
+    <h2>You&rsquo;ve met the people. Now meet the <em>place</em>.</h2>
+    <p>The story is only half of what we&rsquo;re building. Explore the spaces, rituals, and everyday moments that bring East | West to life.</p>
+    <div class="faq-cta-buttons">
+      <a class="btn btn-dark" href="east-west-club-inside.html">Look Inside</a>
     </div>
   </div>
 </section>
